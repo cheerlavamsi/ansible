@@ -4,6 +4,6 @@ resource "aws_instance" "web" {
     instance_type   =   "t2.micro"
 
     tags        =   {
-        Name    =   "ansible-node"  
+        Name    =   "ansible-node-${count.index}"  
     }
 }
