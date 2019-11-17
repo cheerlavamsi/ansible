@@ -1,5 +1,5 @@
 resource "local_file" "foo" {
-    content         =   "{aws_instance.web[0]}\n${aws_instance.web[1]}\n"
+    content         =   "{aws_instance.web.public_ip[0]}\n${aws_instance.web.public_ip[1]}\n"
     filename        =   "/root/ansible/hosts"
   
 }
