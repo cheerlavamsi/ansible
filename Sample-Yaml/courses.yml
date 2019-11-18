@@ -1,8 +1,8 @@
 - batchno: 42
-    course_name: DevOps
-    timing: 6AMIST
-    trainer_name: Raghu
-    students:
+  course_name: DevOps
+  timing: 6AMIST
+  trainer_name: Raghu
+  students:
         - name: vamsi
           email: vamsi@gmail.com
         - name: samalya
@@ -11,10 +11,10 @@
           email: Raghu@gmail.com
 
 - batchno: 41
-    course_name: DevOps
-    timing: 7AMIST
-    trainer_name: Raghu
-    students:
+  course_name: DevOps
+  timing: 7AMIST
+  trainer_name: Raghu
+  students:
         - name: jayaram
           email: jayaram@gmail.com
       
