@@ -12,6 +12,4 @@
     - name: Tas2 in Play2
       debug:
         msg: "Hello from Task2 of Play2"
-
-
 ---
