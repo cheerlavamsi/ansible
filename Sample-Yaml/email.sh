@@ -1,3 +1,3 @@
 #!/bin/bash
 
-read -p 'Enter batch no: ' batchno
+read -p 'Enter batch no: ' batch_no
