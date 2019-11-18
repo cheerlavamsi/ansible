@@ -7,6 +7,4 @@ resource "aws_instance" "web" {
     Name = "ansible-node-${count.index+1}"
   }
 }
-###
-## vpc_security_group_ids= "sg-098fd4a5ffc0e66b6"
-## key_name          = "devops"
+
