@@ -12,6 +12,6 @@
   vars: 
     URL: Vras.Devops/Raghu.com
   tasks:
-    - name: Access Variable from local host
+    - name: Access Variable
       debug:
         msg: "Hello from {{URL}}"
