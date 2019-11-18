@@ -15,3 +15,15 @@
     - name: Access Variable
       debug:
         msg: "Hello from {{URL}}"
+
+- name: Demo on vars from prompt
+  hosts: all
+  vars_prompt:
+    - name: URL
+      prompt: Enter URL
+      private: no
+  tasks: 
+    - name: Access Variable
+      debug:
+        msg: "URL == {{URL}}"
+
