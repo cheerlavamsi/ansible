@@ -12,7 +12,7 @@ EMAILS=('cat courses.yml | yq .| jq '.b42.students[].email'|xargs')
 
 VALUE_NO=$(echo ${#NAMES[*]})
 
-while [ $VALUE_NO -gt 0]; do 
+while [ $VALUE_NO -gt 0 ]; do 
     VALUE_NO=$(($VALUE_NO-1))
     echo -e "Hello ${NAMES[$VALUE_NO]}, I am sending an emails to ${EMAILS[VALUE_NO]}"
 done
