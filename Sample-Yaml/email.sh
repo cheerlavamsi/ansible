@@ -1,8 +1,8 @@
 #!/bin/bash
 
 read -p 'Enter batch no: ' batch_no
-cat courses.yml | yq . | jq '.[].batchno' | grep -w $batch_no &>/dev/null
-if [ $? -ne 0 ]; then
+VALUE=$(cat courses.yml | yq . | jq ".b${batch_n}")
+if [ $VALUE = "null" ]; then
     echo "Given batch no doesnot exist"
     exit 1
 fi
