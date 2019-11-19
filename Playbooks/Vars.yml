@@ -45,8 +45,8 @@
 
 - name: Welcome to Devops
   hosts: all
-  var_prompt:
-    - name: Calss Name
+  vars_prompt:
+    - name: Calss 
       prompt: Enter Class Name
       prompt: no
   tasks:
