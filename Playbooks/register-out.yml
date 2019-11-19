@@ -5,6 +5,6 @@
       shell: uptime
       register: out
 
-- name: Print uptime
-  debug:
-    msg: "{{out}}"
+    - name: Print uptime
+      debug:
+        msg: "{{out}}"
