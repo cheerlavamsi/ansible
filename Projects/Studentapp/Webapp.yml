@@ -1,0 +1,7 @@
+- name: Install Web Server
+  hosts: all
+  tasks: 
+    - name: Install Nginx server
+      yum: 
+        name: nginx
+        state: present
