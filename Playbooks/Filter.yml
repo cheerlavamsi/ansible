@@ -1,0 +1,8 @@
+- name: Demo om Filters
+  hosts: all
+  vars:
+    URL: http://apachemirror.wuchna.com//httpd/httpd-2.4.41.tar.gz
+  tasks:
+    - name: Apply filter
+      debug:
+        msg: "{{URL | urlsplit('hostname')}}"
