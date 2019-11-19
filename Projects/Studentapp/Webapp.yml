@@ -12,3 +12,6 @@
     - name: find files in htdocs
       find:
         paths: "{{HTDOCS_DIR}}"
+      register: out
+        debug:
+          msg: "{{out}}"
