@@ -1,0 +1,10 @@
+- name: Register output of one task in avariable
+  hosts: all
+  tasks:
+    - name: Run shell command
+      shell: uptime
+      register: out
+
+- name: Print uptime
+  debug:
+    msg: "{{out}}"
