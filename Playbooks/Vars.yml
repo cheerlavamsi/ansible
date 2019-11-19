@@ -42,3 +42,15 @@
     - name: Access Variable
       debug:
         msg: "URL == {{URL}}"
+
+- name: Welcome to Devops
+  hosts: all
+  var_prompt:
+    - name: Calss Name
+      prompt: Enter Class Name
+      prompt: no
+  tasks:
+    - name: Access Variable
+      debug:
+        msg: "URL == {{URL}}"
+
