@@ -3,7 +3,7 @@
   tasks:
     - name: Print loop values
       debug:
-        msg: "Course Name = {{item}}"
+        msg: "Course Name = {{item.Course_name}} and Trainer Name = {{item.Trainer_name}}"
       loop:
-        - Devops
-        - Aws  
+        - { Course_name : "Devops" , Trainer_name : "Vamsi"}
+        - { Course_name : "AWS" , Trainer_name : "Samalya"}
