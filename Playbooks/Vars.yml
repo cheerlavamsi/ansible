@@ -35,3 +35,10 @@
     - name: Access Variable
       debug:
         msg: "URL == {{URL}}" 
+
+- name: Demo on host file varaibles
+  hosts: all
+  tasks: 
+    - name: Access Variable
+      debug:
+        msg: "URL == {{URL}}"
