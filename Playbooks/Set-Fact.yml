@@ -1,0 +1,14 @@
+- name: Sety_Fact example
+  hosts: all
+  tasks:
+    - name: Run Id command
+      shell: id -u
+      register: out
+
+    - name: set fact
+      set_fact: 
+        USER_ID: "{{out.stdout}}"
+
+    - name: Print User_ID
+      debug:
+        msg: User_ID = {{USER_ID}}       
