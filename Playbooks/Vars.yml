@@ -31,7 +31,7 @@
   hosts: localhost
   vars_files:
     - var01.yml
-   tasks:
+   tasks: 
     - name: Access Variable
       debug:
         msg: "URL == {{URL}}" 
