@@ -13,5 +13,5 @@
       find:
         paths: "{{HTDOCS_DIR}}"
       register: out
-        debug:
-          msg: "{{out}}"
+    - debug:
+        msg: "{{out}}"
