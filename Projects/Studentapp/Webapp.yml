@@ -1,5 +1,6 @@
 - name: Install Web Server
   hosts: all
+  become: yes
   tasks: 
     - name: Install Nginx server
       yum: 
