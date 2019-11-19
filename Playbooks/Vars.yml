@@ -27,3 +27,14 @@
       debug:
         msg: "URL == {{URL}}"
 
+- name: Demo on Var files
+  hosts: localhost
+  vars_files:
+    - var01.yml
+   tasks:
+    - name: Access Variable
+      debug:
+        msg: "URL == {{URL}}" 
+
+        
+
