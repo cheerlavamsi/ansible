@@ -12,6 +12,11 @@
     - name: find files in htdocs
       find:
         paths: "{{HTDOCS_DIR}}"
+        file_type: any
       register: out
-    - debug:
-        msg: "{{out}}"
+    
+    - name: Remove all nginx default htdoc
+      file: 
+        path: "{{item.path}}"
+        state: absent
+      loop: "{{out.files}}" 
