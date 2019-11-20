@@ -1,0 +1,9 @@
+- name: Copy a config file
+  hosts: all
+  tasks:
+    - name: install nginx server
+      yum:
+        name: nginx
+        state: installed
+
+    - name:
