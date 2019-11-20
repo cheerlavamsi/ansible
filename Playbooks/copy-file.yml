@@ -6,4 +6,12 @@
         name: nginx
         state: installed
 
-    - name:
+    - name: Copy afile
+      copy:
+        src: nginx.conf
+        dest: /etc/nginx/nginx.conf
+
+    - name: Restart nginx
+      service:
+        name: nginx
+        state: restarted
