@@ -1,5 +1,6 @@
 - name: Copy a config file
   hosts: all
+  become: yes
   tasks:
     - name: install nginx server
       yum:
