@@ -1,6 +1,7 @@
 - name: Copy a config file with template
   hosts: all
   become: yes
+  gather_facts: yes
   tasks:
     - name: Install web server
       yum:
