@@ -26,3 +26,11 @@
     url: "{{JDBC_JAR_URL}}"
     dest: "{{Tomcat_Home}}/lib/mysql-connector.jar"
   become_user: "{{App_User}}"
+
+- name: Copy the tomcat configuration 
+  template:
+    src:  "context.xml.j2"
+    dest: "{{Tomcat_Home}}/conf/context.xml" 
+  become_user: "{{App_User}}"
+
+
