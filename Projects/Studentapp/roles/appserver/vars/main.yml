@@ -1,3 +1,9 @@
 App_User: student
 App_Home: /home/{{App_User}}
 Tomcat_Url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.47/bin/apache-tomcat-8.5.47.tar.gz
+Tar_File: "{{Tomcat_Url.split('/') | last }}"
+Tar_Dir: "{{ Tar_File | regex_replace('.tar.gz') }}"
+Tomcat_Home: "{{App_Home}}/{{Tar_Dir}}"
+
+WAR_URL: "https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war"
+JDBC_JAR_URL: "https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar"
