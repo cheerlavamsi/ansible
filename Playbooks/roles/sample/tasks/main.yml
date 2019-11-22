@@ -1,0 +1,3 @@
+- name: Hello from Smaple
+  debug:
+    msg: "Hello from Smaple role"
