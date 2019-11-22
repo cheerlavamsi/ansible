@@ -20,3 +20,9 @@
     src: "{{WAR_URL}}"
     dest: "{{Tomcat_Home}}/webapps/student.war"
   become_user: "{{App_User}}"
+
+- name: Download JDBC Jar file
+  get_url:
+    src: "{{JDBC_JAR_URL}}"
+    dest: "{{TOMCAT_HOME}}/lib/mysql-connector.jar"
+  become_user: "{{App_User}}"
