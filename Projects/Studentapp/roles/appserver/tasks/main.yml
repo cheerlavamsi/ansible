@@ -17,12 +17,12 @@
 
 - name: Downlaod War URl
   get_url:
-    src: "{{WAR_URL}}"
+    url: "{{WAR_URL}}"
     dest: "{{Tomcat_Home}}/webapps/student.war"
   become_user: "{{App_User}}"
 
 - name: Download JDBC Jar file
   get_url:
-    src: "{{JDBC_JAR_URL}}"
+    url: "{{JDBC_JAR_URL}}"
     dest: "{{Tomcat_Home}}/lib/mysql-connector.jar"
   become_user: "{{App_User}}"
