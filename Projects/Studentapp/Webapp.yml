@@ -1,34 +1,7 @@
 - name: Install Web Server
   hosts: all
   become: yes
-  vars:
-    HTDOCS_DIR: /usr/share/nginx/html/
-  tasks: 
-    - name: Install Nginx server
-      yum: 
-        name: nginx
-        state: present
-
-    - name: find files in htdocs
-      find:
-        paths: "{{HTDOCS_DIR}}"
-        file_type: any
-      register: out
+ 
+  roles:
+    - webserver
     
-    - name: Remove all nginx default htdoc
-      file: 
-        path: "{{item.path}}"
-        state: absent
-      loop: "{{out.files}}" 
-
-    - name: Download Htdocs
-      unarchive:
-        src: https://studentapi-cit.s3-us-west-2.amazonaws.com/studentapp-frontend.tar.gz
-        dest: "{{HTDOCS_DIR}}"
-        remote_src: yes
-
-    - name: Start Service
-      service:
-        name: nginx
-        state: started
-        enabled: yes
