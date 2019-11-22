@@ -55,9 +55,10 @@ http {
 
        {% if URL == "google.com" %}
          location /google {
-             proxy_pass https://google.com;
+             proxy_pass https://www.google.com;
          }
-       {% endif %}}
+       {% endif %}
+       
         error_page 404 /404.html;
             location = /40x.html {
         }
