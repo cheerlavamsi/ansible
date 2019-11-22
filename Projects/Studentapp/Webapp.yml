@@ -1,7 +1,6 @@
 - name: Install Web Server
   hosts: all
   become: yes
- 
   roles:
     - webserver
     
