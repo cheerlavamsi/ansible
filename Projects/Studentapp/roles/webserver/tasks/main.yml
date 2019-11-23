@@ -2,6 +2,7 @@
   yum: 
     name: nginx
     state: present
+  notify: Restart HTTPD
 
 - name: find files in htdocs
   find:
@@ -25,9 +26,10 @@
   copy: 
     src: nginx.conf
     dest: /etc/nginx/nginx.conf
+  notify: Restart HTTPD
 
 - name: Start Service
   service:
     name: nginx
-    state: restarted
+    state: started
     enabled: yes
