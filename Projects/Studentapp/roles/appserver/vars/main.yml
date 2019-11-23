@@ -7,3 +7,5 @@ Tomcat_Home: "{{App_Home}}/{{Tar_Dir}}"
 
 WAR_URL: "https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war"
 JDBC_JAR_URL: "https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar"
+
+TOMCAT_SYSTEMD_SCRIPT: https://s3-us-west-2.amazonaws.com/studentapi-cit/tomcat-init

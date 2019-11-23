@@ -33,4 +33,10 @@
     dest: "{{Tomcat_Home}}/conf/context.xml" 
   become_user: "{{App_User}}"
 
+- name: Download Tomcat SystemD script
+  get_url:
+      url: "{{TOMCAT_SYSTEMD_SCRIPT}}"
+      dest: /etc/init.d/tomcat
+      mode: 755 
+
 
