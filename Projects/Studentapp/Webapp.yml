@@ -3,6 +3,6 @@
   become: yes
   roles:
     - webserver
-    #- appserver
+    - appserver
 
     
