@@ -38,5 +38,8 @@
       url: "{{TOMCAT_SYSTEMD_SCRIPT}}"
       dest: /etc/init.d/tomcat
       mode: 755 
+- name: Reload systemd 
+  shell: systemctl daemon-reload 
+
 
 
