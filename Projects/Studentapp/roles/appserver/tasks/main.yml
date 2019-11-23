@@ -41,5 +41,11 @@
 - name: Reload systemd 
   shell: systemctl daemon-reload 
 
+- name: Start Tomcat 
+  service:
+    name: tomcat 
+    state: restarted
+    enabled: yes
+
 
 
