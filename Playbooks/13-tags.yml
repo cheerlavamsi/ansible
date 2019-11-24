@@ -1,0 +1,14 @@
+- name: Tags in ansible 
+  hosts: all
+  tasks:
+    - name: Print Hello CentOS
+      debug:
+        msg: Hello CentOS
+      tags:
+        - centos 
+
+    - name: Print Hello Ubuntu 
+      debug:
+        msg: Hello Ubuntu 
+      tags: 
+        - ubuntu
