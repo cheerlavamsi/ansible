@@ -1,0 +1,11 @@
+- name: Load Schema 
+  hosts: all
+  become: yes 
+  tasks:    
+    - name: Install MySQL Client Packages 
+      yum: 
+        name: "{{item}}"
+        state: latest 
+      loop:
+        - MySQL-python
+        - mariadb 
