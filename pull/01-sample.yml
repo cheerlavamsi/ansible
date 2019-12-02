@@ -1,0 +1,5 @@
+# ansible
+
+---
+curl -s https://raw.githubusercontent.com/linuxautomations/labautomation/master/tools/awx/install.sh | sudo bash
+---
