@@ -9,3 +9,13 @@
       loop:
         - MySQL-python
         - mariadb 
+
+- name: Load Schema 
+      mysql_db:
+        login_host: "{{DBHOST}}"
+        login_user: "{{DBUSER}}"
+        login_password: "{{DBPASS}}"
+        state: import
+        name: all
+        target: /tmp/schema.sql
+
