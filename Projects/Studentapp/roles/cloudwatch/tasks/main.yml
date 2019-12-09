@@ -1,0 +1,11 @@
+- name: Copy cloud watch script 
+  template:
+    src: cloud-watch-metrics.sh
+    dest: /opt/cloud-watch-metrics.sh 
+    mode: 0755 
+
+- name: Enable cron scheduling 
+  cron:
+    name: "Run Cloud Watch Script"
+    minute: "*/2"
+    job: "/opt/cloud-watch-metrics.sh "
