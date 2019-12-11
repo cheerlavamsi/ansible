@@ -4,8 +4,8 @@
   roles:
     - webserver
     - appserver
-    #- newrelic
-    - cloudwatch
+    - newrelic
+    #- cloudwatch
 
     
 
