@@ -1,5 +1,5 @@
 - name: Checking Host Connections
-  hosts: "{{18.232.92.107}}"
+  hosts: [18.232.92.107]
   tasks:
     - name: connection success
       debug:
