@@ -1,6 +1,6 @@
 - name: Checking Host Connections
   connection: network_cli
-  hosts: 18.232.92.107
+  hosts: all
   tasks:
    - name: Connecting to Host
      debug:
