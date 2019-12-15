@@ -1,4 +1,6 @@
 - name: Checking Host Connections
   hosts: "18.232.92.107"
   tasks:
-    - ping:
+    - name: connection success
+      debug:
+        msg: connection pass
