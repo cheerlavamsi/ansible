@@ -1,4 +1,4 @@
 - name: Checking Host Connections
-  hosts: all
+  hosts: 18.232.92.107
   tasks:
    - ping:
