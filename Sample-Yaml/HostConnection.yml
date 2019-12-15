@@ -1,4 +1,7 @@
 - name: Checking Host Connections
-  hosts: 18.232.92.107
+  atlanta:
+  host1:
+    http_port: 22
+    host: 18.232.92.107
   tasks:
-   - ping:
+    - ping:
