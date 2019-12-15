@@ -1,5 +1,5 @@
-- name: Checking Host Connections
-  hosts: 172.31.43.32
+- name: Checking Local host Connection
+  hosts: localhost
   tasks:
     - name: connection success
       debug:
