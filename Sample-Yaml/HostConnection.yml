@@ -1,7 +1,4 @@
 - name: Checking Host Connections
-  connection: network_cli
   hosts: all
   tasks:
-   - name: Connecting to Host
-     debug:
-      msg: "Connection Succesfull"
+   - ping:
