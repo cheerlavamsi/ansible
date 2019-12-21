@@ -5,8 +5,8 @@
 
 - name: Install logstash
   package:
-      name: "{{LOGSTASH_URL}}"
-      state: latest
+    name: "{{LOGSTASH_URL}}"
+    state: latest
 
 - name: Install logstash Plugin
   shell: /usr/share/logstash/bin/logstash-plugin install logstash-output-amazon_es
