@@ -1,6 +1,6 @@
 - name: Install Java
   package:
-    name: Java
+    name: java
     state: latest
 
 - name: Install logstash
