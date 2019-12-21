@@ -1,0 +1,8 @@
+- name: Install logstash
+  hosts: all
+  become: yes
+  gather_facts: yes
+  roles:
+    - logstash
+
+    

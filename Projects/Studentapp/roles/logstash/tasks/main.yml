@@ -1,0 +1,18 @@
+- name: Install Java
+  package:
+    name: Java
+    state: latest
+
+- name: Install logstash
+  package:
+      name: "{{LOGSTASH_URL}}"
+      state: latest
+
+- name: Install logstash Plugin
+  shell: /usr/share/logstash/bin/logstash-plugin install logstash-output-amazon_es
+
+- name: Copy Logstash Config 
+  template:
+    src:  sample.conf.j2
+    dest: /etc/logstash/conf.d/sample.conf
+

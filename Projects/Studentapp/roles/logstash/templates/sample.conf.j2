@@ -1,0 +1,15 @@
+input {
+  beats {
+    port => 5044
+  }
+}
+
+output {
+  amazon_es {
+    hosts => ["{{ES_URL}}"]
+    region => "us-east-1"
+    aws_access_key_id => 'ACCESS_KEY'
+    aws_secret_access_key => 'SECRET_KEY'
+    index => "access-logs-%{+YYYY.MM.dd}"
+  }
+}

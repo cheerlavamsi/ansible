@@ -1,0 +1,2 @@
+LOGSTASH_VERSION: "7.1.1"
+LOGSTASH_URL: "https://artifacts.elastic.co/downloads/logstash/logstash-{{LOGSTASH_VERSION}}.rpm"
