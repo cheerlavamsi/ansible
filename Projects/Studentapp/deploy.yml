@@ -1,6 +1,6 @@
 - name: Make Deployment of given URL file 
   hosts: all
   become: yes
-  gather_facts: yes
+  gather_facts: no
   roles:
     - deploy
