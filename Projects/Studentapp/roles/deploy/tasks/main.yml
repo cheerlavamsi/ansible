@@ -1,0 +1,31 @@
+- name: Find apache Tomcat  
+  find:
+    paths: /home/{{APPUSER}}
+    patterns: "apache*"
+    file_type: directory
+  register: out 
+
+- name: Setup tomcat path 
+  set_fact:
+    TOMCAT_DIR: "{{item.path}}"
+  loop: "{{out.files}}"
+
+- name: Find old war files 
+  find:
+    paths: "{{TOMCAT_DIR}}/webapps"
+    patterns: "student*"
+    file_type: any 
+  register: out 
+
+- name: Delete old deployment files 
+  file:
+    path: "{{item.path}}"
+    state: absent 
+  loop: "{{out.files}}" 
+
+- name: Download new war file 
+  get_url:
+    url: "{{URL}}"
+    dest: "{{TOMCAT_DIR}}/webapps/student.war"
+    username: "{{NEXUS_USR}}"
+    password: "{{NEXUS_PSW}}"
